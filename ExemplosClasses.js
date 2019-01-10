@@ -14,7 +14,7 @@ retangulo.altura
 retangulo.largura
 
 
-class Pessoa{
+class Humano{
 
     constructor(nome, sexo, idade, altura, cor){
 
