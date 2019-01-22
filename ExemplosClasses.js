@@ -14,7 +14,7 @@ retangulo.altura
 retangulo.largura
 
 
-class Humano{
+class Pessoa{
 
     constructor(nome, sexo, idade, altura, cor){
 
@@ -31,3 +31,66 @@ class Humano{
 }
 
 var pessoa = new Pessoa ("João", "masculino", 32, 1.80, "branca")
+
+//Exemplo de Filter, Map e Reduce
+
+data = [
+
+    {
+        name: 'Babalu',
+        age: 3,
+        type: 'dog'
+    },
+    {
+        name: 'Mel',
+        age: 2,
+        type: 'dog'
+    },
+    {
+        name: 'Timão',
+        age: 10,
+        type: 'cat'
+    },
+    {
+        name: 'Nalla',
+        age: 6,
+        type: 'cat'
+    },
+];
+
+let dogs = data.filter((animal) => {
+    return animal.type === 'dog';
+})
+
+dogs.map((animal) => {
+    return animal.age *=7
+})
+
+var calcAge = dogs.reduce((sum, animal) => {
+    return sum + animal.age;
+}, 0)
+
+console.log (dogs);
+
+// Outro exemplo de Map
+
+var fahrenheit = [0, 32, 45, 50, 75, 80, 99, 120];
+
+var celcius = fahrenheit.map (function (elem) {
+    return Math.round ((elem - 32) * 5 /9 );
+});
+
+var rockets = [
+
+    {country: 'Russia', launches: 32},
+    {country: 'US', launches: 23},
+    {country: 'China', launches: 16},
+    {country: 'Europe(ESA)', launches: 7},
+    {country: 'India', launches: 4},
+    {country: 'Japan', launches: 3},
+];
+
+var sum = rockets.reduce (function(prevVal, elem){
+
+    return prevVal + elem.launches;
+}, 0);
