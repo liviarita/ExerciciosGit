@@ -94,3 +94,20 @@ var sum = rockets.reduce (function(prevVal, elem){
 
     return prevVal + elem.launches;
 }, 0);
+
+
+// Ler uma lista de nomes e imprimir
+
+var names = [
+    {name: 'Lívia'},
+    {name: 'Daniel'},
+    {name: 'Bianca'},
+    {name: 'Lucas'},
+    {name: 'Rodolfo'},
+    {name: 'Neto'},
+];
+
+names.map ((nomes) => {
+    console.log (nomes.name);
+    return nomes
+});
